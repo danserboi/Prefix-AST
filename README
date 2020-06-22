@@ -1,0 +1,20 @@
+SERBOI FLOREA-DAN 325CB
+Eu am ales ca intai sa parcurg arborele recursiv si sa retin numerele intr-un 
+vector de numere(dupa ce le-am convertit din string in intreg) iar apoi sa 
+prelucrez vectorii respectivi pentru a obtine rezultatul final.
+In fisierul .asm avem 4 functii: operatie, atoi, arbore si main.
+Functia operatie realizeaza o operatie, operanzii sunt in ESI si EDI, rezultatul
+e tinut minte in ESI.Primeste ca parametru un operator.
+Functia atoi converteste un string primit ca parametru intr-un intreg. 
+Rezultatul e tinut minte in ESI.
+Functia arbore parcurge arborele recursiv in preordine si stocheaza numere
+(ca intreg) si operanzii(ca si caracter) in vectori separati, pastrandu-se 
+indicele din parcurgerea in preordine. In vectorul de numere, la indicele 
+unde exista operator in celalalt vector valoarea este 0. Reciproc valabil.
+In main se apeleaza functia arbore dupa care parcurgem vectorii de la sfarsit 
+spre inceput tocmai pentru a respecta ordinea operatiilor. La indicele unde avem
+operator, se efectueaza operatia si se stocheaza rezultatul in numere la 
+acelasi indice.Se copiaza peste operanzii care au fost implicati in operatie 
+valorile din vector de dupa ei pentru a se pastra corectitudinea operatiilor.
+In final, se afiseaza numarul de pe prima pozitie din vectorul numere, care 
+reprezinta rezultatul final.
